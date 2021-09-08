@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif; background-color: #F7E5C6;}
+.bgimg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('images/rosone.png');
+  background-color: #F7E5C6;
+  min-height: 100%;
+}
+li {
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+  position: center;
+  width: 150px;
+}
+li span {
+  display: block;
+  position: center;
+  font-size: 4.5rem;
+}
+.header2 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #F7E5C6;
+  min-height: 100%;
+  background-image: url('images/logo-blur.png');
+  background-size: contain;
+  padding: 64px 64px;
+
+}
+</style>
+<body>
+
+<!-- Sidebar with image -->
+<nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:45%">
+  <div class="bgimg"></div>
+</nav>
+
+<!-- Page Content -->
+<div class="w3-main w3-padding-large" style="margin-left:45%">
+
+  <!-- Header -->
+  <header class="w3-container w3-center">
+    <div class="header2">
+	</div>
+	<img src="images/rosone.png" class="w3-image w3-hide-large w3-hide-small w3-round" style="display:block;width:60%;margin:auto;">
+    <img src="images/rosone.png" class="w3-image w3-hide-large w3-hide-medium w3-round" width="1000" height="1333">
+  </header>
+
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-16" id="about">
+  
+    <div id="countdown" class="w3-container w3-center">
+      <ul>
+        <li><span id="days">59</span>days</li>
+        <li><span id="hours">45</span>hours</li>
+        <li><span id="minutes">09</span>minutes</li>
+        <li><span id="seconds">36</span>seconds</li>
+      </ul>
+	</div>
+    
+  <!-- End About Section -->
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-padding-32 w3-content w3-text-grey" id="contact" style="margin:0 auto">
+    <form action="/action_page.php" target="_blank" style="display:flex; margin:auto">
+      <input class="w3-border" type="text" placeholder="Enter your email" required name="Enter" style="background-color: #F7E5C6; margin:0 auto">
+      <button class="w3-button w3-padding-large" type="submit" style="margin:0 auto; background-color: #9B1B15; color: white" >Subscribe</button>
+    </form>
+  <!-- End Contact Section -->
+  </div>  
+  
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-xlarge" style="margin:0px">
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+	<i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <!-- End footer -->
+  </footer>
+  
+<!-- END PAGE CONTENT -->
+</div>
+
+<script>
+(function () {
+  const second = 1000,
+        minute = second * 60,
+        hour = minute * 60,
+        day = hour * 24;
+
+  let birthday = "Sep 30, 2021 00:00:00",
+      countDown = new Date(birthday).getTime(),
+      x = setInterval(function() {    
+
+        let now = new Date().getTime(),
+            distance = countDown - now;
+
+        document.getElementById("days").innerText = Math.floor(distance / (day)),
+          document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+          document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+          document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+
+        //do something later when date is reached
+        if (distance < 0) {
+          let headline = document.getElementById("headline"),
+              countdown = document.getElementById("countdown"),
+              content = document.getElementById("content");
+
+          headline.innerText = "It's my birthday!";
+          countdown.style.display = "none";
+          content.style.display = "block";
+
+          clearInterval(x);
+        }
+        //seconds
+      }, 0)
+  }());
+</script>
+
+</body>
+</html>
