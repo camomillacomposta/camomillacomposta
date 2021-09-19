@@ -84,7 +84,7 @@ header, .footer {
 }
 
 #rosone-sidebar {
-  max-width:195%;
+  max-width: 195%;
   overflow: hidden;
   transform: translateX(-50%);
   margin-left: 50%;
