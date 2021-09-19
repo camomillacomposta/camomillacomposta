@@ -1,11 +1,12 @@
 * {
   box-sizing: border-box;
-  font-family
+  font-family: sans-serif;
 }
 body {
   min-height: 100vh;
   flex-direction: row;
   margin: 0;
+  background-color: #F7E5C6;
 }
 header {
   display: none;
@@ -84,7 +85,7 @@ header, .footer {
 }
 
 #rosone-sidebar {
-  max-width: 195%;
+  max-width:204%;
   overflow: hidden;
   transform: translateX(-50%);
   margin-left: 50%;
@@ -114,25 +115,26 @@ header, .footer {
   padding: 0% 0% 0% 0%;
 }
 .form {
-  width: 80%;
+  width: 90%;
 }
 form {
   display: inline-flex !important;
   justify-content: center;
   width: 100%;
-  margin: 0% 10% 0% 10% !important;
+  margin: 0% 5% 0% 5% !important;
 }
 form > input[type="text"] {
   font-size: 1.5vh;
   border-radius: 25px 0 0 25px;
-  width: 60%;
+  width: 75%;
+  padding: 3% 0% 3% 3%;
 }
 form > button[type="submit"] {
   font-size: 1.5vh;
   border-radius: 0 25px 25px 0;
-  width: 40%;
+  width: 25%;
 }
-@media all and (min-width: 600px) {
+@media all and (min-width: 1025px) {
   header {
     display: inline;
   }
@@ -164,18 +166,23 @@ form > button[type="submit"] {
   }
   #rosone-sidebar {
     max-width: 162%;
-    overflow: hidden;
     margin-left: 28%;
     margin-top: -37%;
   }
+  .form {
+  width: 100%;
+  }
+  form {
+    display: inline-flex !important;
+    justify-content: center;
+    width: 50%;
+    margin: 0% 0% 0% 0% !important;
+  }
   form > input[type="text"] {
-    font-size: 1.5vh;
-    border-radius: 25px 0 0 25px;
-    padding: 5% 70% 5% 10%;
+    width: 70%;
+    padding: 3% 0% 3% 5%;
   }
   form > button[type="submit"] {
-    font-size: 1.5vh;
-    border-radius: 0 25px 25px 0;
-    padding: 0% 10% 0% 10%;
+    width: 30%;
   }
 }
