@@ -73,7 +73,7 @@ header, .footer {
   text-align: center;
 }
 .footer > footer > img {
-  max-width: 30%;
+  max-width: 28%;
   margin-top: 10%;
   margin-bottom: -5%;
 }
@@ -134,10 +134,8 @@ form > button[type="submit"] {
   width: 25%;
   padding: 3% 0% 3% 0%;
 }
-.track {
-    stroke-width: 1;
-    stroke: lightgrey;
-    fill: none;
+#msg {
+  padding-top: 2%;
 }
 .progress {
     stroke-width: 4;
