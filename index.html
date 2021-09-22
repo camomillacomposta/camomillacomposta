@@ -23,35 +23,47 @@
 	    <img id="logo-img2" src="images/logo-blur-cut.png">
 	    <main class="content">
 		  <div class="aside-container">
+		    <svg viewBox="0 0 100 100">
+              <circle id="circle-days" cx="50%" cy="50%" r="35%" class="progress"></circle>
+            </svg>
             <aside>
 		      <span id="days">59</span>
 		      <p>days</p>
 		    </aside>
 		  </div>
 		  <div class="aside-container">
-          <aside>
-		    <span id="hours">59</span>
-		    <p>hours</p>
-		  </aside>
-		   </div>
+		    <svg viewBox="0 0 100 100">
+              <circle id="circle-hours" cx="50%" cy="50%" r="35%" class="progress"></circle>
+            </svg>
+            <aside>
+		      <span id="hours">59</span>
+		      <p>hours</p>
+		    </aside>
+		  </div>
 		  <div class="aside-container">
-          <aside>
-		    <span id="minutes">59</span>
-		    <p>minutes</p>
-		  </aside>
-		   </div>
+		    <svg viewBox="0 0 100 100">
+              <circle id="circle-minutes" cx="50%" cy="50%" r="35%" class="progress"></circle>
+            </svg>
+            <aside>
+		      <span id="minutes">59</span>
+		      <p>minutes</p>
+		    </aside>
+		  </div>
 		  <div class="aside-container">
-          <aside>
-		    <span id="seconds">59</span>
-		    <p>seconds</p>
-		  </aside>
-		   </div>
+		    <svg viewBox="0 0 100 100">
+              <circle id="circle-seconds" cx="50%" cy="50%" r="35%" class="progress"></circle>
+            </svg>
+            <aside>
+		      <span id="seconds">59</span>
+		      <p>seconds</p>
+		    </aside>
+          </div>
         </main>
 	  </div>
 	  <div class="footer">
         <footer>
 		  <div class="form">
-		    <form action="/action_page.php" style="display:flex; margin:auto">
+		    <form action="javascript:handle(email.value)" style="display:flex; margin:auto">
               <input class="w3-border" type="text" id="email" placeholder="Enter your email" required name="Enter" style="background-color: #F7E5C6; margin:0 auto">
               <button class="w3-button w3-padding-large" type="submit" style="margin:0 auto; background-color: #9B1B15; color: white" >Subscribe</button>
             </form>
