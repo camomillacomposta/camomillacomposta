@@ -42,20 +42,19 @@ header, .footer {
   flex-direction: row;
   background-color: #F7E5C6;
   font-family: sans-serif;
-  padding: 2% 2% 16% 2%;
 }
 .content > .aside-container {
   flex: 1;
+  display: flex;
   text-align: center;
   margin: auto;
-  background-image: url("../images/arco-camomilla.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  padding: 5% 5% 5% 5%;
+  padding: 0% 0% 0% 0%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 .content > .aside-container > aside {
-  padding: 0% 0% 8% 0%;
+  position: absolute;
 }
 .content > .aside-container > aside > span {
   display: block;
@@ -124,15 +123,43 @@ form {
   margin: 0% 5% 0% 5% !important;
 }
 form > input[type="text"] {
-  font-size: 1.5vh;
+  font-size: 2.5vh;
   border-radius: 25px 0 0 25px;
   width: 75%;
   padding: 3% 0% 3% 3%;
 }
 form > button[type="submit"] {
-  font-size: 1.5vh;
+  font-size: 2.5vh;
   border-radius: 0 25px 25px 0;
   width: 25%;
+  padding: 3% 0% 3% 0%;
+}
+.track {
+    stroke-width: 1;
+    stroke: lightgrey;
+    fill: none;
+}
+.progress {
+    stroke-width: 4;
+    stroke: rgb(59, 56, 56);
+    stroke-linecap: round;
+    fill: none;
+    transform: rotate(270deg);
+    transform-origin: center;
+}
+svg {
+  max-width: 100%;
+}
+@media all and (max-width: 500px) {
+  form > input[type="text"] {
+    font-size: 1.5vh;
+  }
+  form > button[type="submit"] {
+    font-size: 1.5vh;
+  }
+  .col-3 {
+      margin-bottom: 10%;
+  }
 }
 @media all and (min-width: 1025px) {
   header {
