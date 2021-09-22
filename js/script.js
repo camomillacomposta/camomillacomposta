@@ -1,3 +1,12 @@
+function handle(email) {
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", "action.php", true);
+  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  xhr.send("email=" + email);
+  document.getElementById("msg").innerText = "Grazie per averci fornito la tua email, verrai contattato al più presto.";
+  document.getElementById("form").reset();
+}
+
 (function () {
   const second = 1000, minute = second * 60, hour = minute * 60, day = hour * 24;
   let birthday = "Sep 30, 2021 00:00:00",
